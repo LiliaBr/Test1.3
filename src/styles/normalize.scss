@@ -79,6 +79,7 @@
   menu {
     margin: 0;
     padding: 0;
+    list-style: none;
   }
   
   a {
@@ -178,7 +179,13 @@
     margin: 0; /* 2 */
   
   }
-  
+  button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
   /**
    * Show the overflow in IE.
    * 1. Show the overflow in Edge.

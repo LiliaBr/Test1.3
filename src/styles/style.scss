@@ -179,12 +179,10 @@ body {
 
   &__desktop {
     display: flex;
-  }
-  &__desktop a {
-    display: flex;
     align-items: center;
   }
-  &__desktop a > span {
+
+  &__desktop span {
     margin-right: 8px;
   }
 }
@@ -332,6 +330,7 @@ body {
     overflow: auto;
     align-items: center;
     list-style: none;
+    margin-left: -40px;
   }
   &__servises::-webkit-scrollbar {
     width: 0px;
