@@ -617,6 +617,10 @@ body {
   overflow: auto;
   align-items: center;
 }
+.menu__servises::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(255, 255, 255, 0);
+}
 .menu__link {
   font-size: 16px;
   line-height: 24px;
