@@ -616,6 +616,7 @@ body {
   display: flex;
   overflow: auto;
   align-items: center;
+  list-style: none;
 }
 .menu__servises::-webkit-scrollbar {
   width: 0px;
