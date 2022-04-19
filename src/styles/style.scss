@@ -347,6 +347,18 @@ body {
     white-space: nowrap;
   }
   @media only screen and (min-width: 1120px) {
+
+    // .menu__servises
+    &__servises {
+        display: flex;
+        overflow: auto;
+        align-items: center;
+    }
+     &__servises::-webkit-scrollbar {
+        width: 0px;
+        background: rgba(255, 255, 255, 0.0);
+    }
+    // .menu__link
     &__link {
       margin-right: 34px;
     }
