@@ -330,7 +330,6 @@ body {
     overflow: auto;
     align-items: center;
     list-style: none;
-    margin-left: -40px;
   }
   &__servises::-webkit-scrollbar {
     width: 0px;
@@ -346,6 +345,14 @@ body {
     margin-right: 28px;
     white-space: nowrap;
   }
+  @media only screen and (min-width: 769px) and (max-width: 1119px) {
+    
+    &__servises {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 22px;
+    }
+  }
   @media only screen and (min-width: 1120px) {
 
     // .menu__servises
@@ -354,19 +361,17 @@ body {
         overflow: auto;
         align-items: center;
     }
-     &__servises::-webkit-scrollbar {
-        width: 0px;
-        background: rgba(255, 255, 255, 0.0);
-    }
     // .menu__link
     &__link {
       margin-right: 34px;
     }
   }
+
   &__link--active {
     border: 2px $color_4 solid;
     border-radius: 6px;
     background-color: #fff;
     padding: 8px 13px;
+    margin-left: -40px;
   }
 }
