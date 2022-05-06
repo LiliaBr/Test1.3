@@ -117,79 +117,36 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../.nvm/versions/node/v18.0.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"scripts/index.js":[function(require,module,exports) {
+// function readMore() {
+//   var dots = document.getElementById("dots");
+//   var more = document.getElementById("more");
+//   var btn = document.getElementById("btn");
+//   if (dots.style.display === "none") {
+//     dots.style.display="inline";
+//     btn.innerHTML="Читать далее";
+//     more.style.display="none";
+//   } else {
+//     dots.style.display="none"
+//     btn.innerHTML="Скрыть";
+//     more.style.display="inline";
+//   }
+// }
+// readMore();
+window.onload = function () {
+  //записываем DOM элемент в переменную*
+  btn = document.querySelector('.section__read-more'); //записываем DOM элемент в переменную*
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+  text = document.querySelector('.more'); //событие клик по нашему DOM элементу*
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../.nvm/versions/node/v18.0.0/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
+  btn.onclick = function () {
+    //элементу добавляем/удаляем класс (toggle)
+    //есть ещё add/remove, но toggle делает проверку
+    //если класса нет - добавляет, если есть - удаляет
+    text.classList.toggle('open');
   };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../.nvm/versions/node/v18.0.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles/style.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"/Users/lidiastarostina/projects/test1.3/src/assets/font/TTLakes-Regular.ttf":[["TTLakes-Regular.22438c9a.ttf","assets/font/TTLakes-Regular.ttf"],"assets/font/TTLakes-Regular.ttf"],"/Users/lidiastarostina/projects/test1.3/src/assets/font/TTLakes-Medium.ttf":[["TTLakes-Medium.0530da0f.ttf","assets/font/TTLakes-Medium.ttf"],"assets/font/TTLakes-Medium.ttf"],"/Users/lidiastarostina/projects/test1.3/src/assets/font/TTLakes-Bold.ttf":[["TTLakes-Bold.1fb9d512.ttf","assets/font/TTLakes-Bold.ttf"],"assets/font/TTLakes-Bold.ttf"],"./../assets/icon/icon__burger.svg":[["icon__burger.69c3f405.svg","assets/icon/icon__burger.svg"],"assets/icon/icon__burger.svg"],"./../assets/icon/icon__phone.svg":[["icon__phone.b327fd72.svg","assets/icon/icon__phone.svg"],"assets/icon/icon__phone.svg"],"./../assets/icon/icon__chat.svg":[["icon__chat.c32db960.svg","assets/icon/icon__chat.svg"],"assets/icon/icon__chat.svg"],"./../assets/icon/icon__user.svg":[["icon__user.2a5cb428.svg","assets/icon/icon__user.svg"],"assets/icon/icon__user.svg"],"./../assets/icon/icon__path.svg":[["icon__path.7768441c.svg","assets/icon/icon__path.svg"],"assets/icon/icon__path.svg"],"./../assets/icon/icon__search.svg":[["icon__search.b619edda.svg","assets/icon/icon__search.svg"],"assets/icon/icon__search.svg"],"_css_loader":"../../../.nvm/versions/node/v18.0.0/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.nvm/versions/node/v18.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+};
+},{}],"../../../.nvm/versions/node/v18.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +350,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../.nvm/versions/node/v18.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/style.ff1c4cab.js.map
+},{}]},{},["../../../.nvm/versions/node/v18.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","scripts/index.js"], null)
+//# sourceMappingURL=/scripts.bcf3243b.js.map

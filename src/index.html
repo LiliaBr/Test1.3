@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.scss">
+    <link rel="stylesheet" href="styles/style.scss">
     <title>WebPack</title>
 </head>
 <body>
@@ -37,41 +37,38 @@
                     <h1 class="section__title"><a href="#" title="Услуги и сервисы">Услуги и сервисы</a></h1>
                     <div class="section__menu--container--desktop">
                         <div class="menu__desktop">
-                            <span>Оставить заявку</span><button href="#" title="Оставить заявку" class="menu__item menu__item--path menu__item--me16"></button>
-                            <span>Статус ремонта</span><button href="#" title="Статус ремонта" class="menu__item menu__item--search"></button>
+                            <a href="#" title="Оставить заявку">Оставить заявку</a><button href="#" title="Оставить заявку" class="menu__item menu__item--path menu__item--me16"></button>
+                            <a href="#" title="Статус ремонта">Статус ремонта</a><button href="#" title="Статус ремонта" class="menu__item menu__item--search"></button>
                         </div>
                     </div>
                 </div>
                 <menu class="section__menu">
                     <ul class="menu__servises">
-                        <li class="menu__link menu__link--active"><a href="#" title="Ремонтируемые бренды">Ремонтируемые бренды</a></li>
-                        <li class="menu__link"><a href="#" title="Ремонтируемые устройства">Ремонтируемые устройства</a></li>
-                        <li class="menu__link"><a href="#" title="Цены на услуги">Цены на услуги</a></li>
-                        <li class="menu__link"><a href="#" title="Адреса сервисных центров">Адреса сервисных центров</a></li>
-                        <li class="menu__link"><a href="#" title="Специальные цены">Специальные цены</a></li>
-                        <li class="menu__link"><a href="#" title="Отзывы">Отзывы</a></li>
+                        <li class="menu__link"><a class="menu__link--item active" href="#" title="Ремонтируемые бренды">Ремонтируемые бренды</a></li>
+                        <li class="menu__link"><a class="menu__link--item" href="#" title="Ремонтируемые устройства">Ремонтируемые устройства</a></li>
+                        <li class="menu__link"><a class="menu__link--item" href="#" title="Цены на услуги">Цены на услуги</a></li>
+                        <li class="menu__link"><a class="menu__link--item" href="#" title="Адреса сервисных центров">Адреса сервисных центров</a></li>
+                        <li class="menu__link"><a class="menu__link--item" href="#" title="Специальные цены">Специальные цены</a></li>
+                        <li class="menu__link"><a class="menu__link--item" href="#" title="Отзывы">Отзывы</a></li>
                     </ul>
                 </menu>
                 <div class="section__content-block">
                     <div class="section__text">
-                        <!-- <div class="section__comments">Отзывы</div> -->
                         <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
                         Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
 
-                        <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера 
-                            <span>,что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
+                        <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                            <span class="more">что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
                         что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-                        <div class="section__read-more">
-                            <a href="#" title=""><span>
-                                <img src="assets/icon/icon__arrow.svg">Читать далее
-                            </span></a>
-                        </div>
+                        <button class="section__read-more" id="btn" onclick="">
+                            <img src="assets/icon/icon__arrow.svg">Читать далее</button>
                     </div> 
                     <div class="section__img"><img src="assets/image/im1.png" width="100%" height="100%"></div>
                 </div>
             </div>
-        </section>    
+        </section>   
     </main>
+    <script src="/scripts/index.js"></script> 
 </body>
 </html>
 

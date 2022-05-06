@@ -180,12 +180,16 @@ body {
   &__desktop {
     display: flex;
     align-items: center;
+    width: 356px;
   }
 
-  &__desktop span {
+  &__desktop a {
     margin-right: 8px;
+    
   }
 }
+
+
 .section {
   &__container {
     padding: 24px 16px 0;
@@ -202,9 +206,14 @@ body {
   }
   // .section__container-desktop
   &__container-desktop {
-    display: flex;
+    display: block;
   }
 
+  @media only screen and (min-width: 481px) {
+    &__container-desktop {
+      display: flex;
+    }
+  }
   // .section__title
 
   &__title::before {
@@ -219,6 +228,7 @@ body {
     border-bottom-right-radius: 4px;
   }
   &__title {
+    width: 100%;
     font-size: 28px;
     font-weight: 700;
     line-height: 40px;
@@ -274,24 +284,18 @@ body {
       line-height: 20px;
     }
   }
-  &__text p + p {
+  .more {
     display: none;
   }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    &__text p + p {
-      display: inline;
-    }
-    &__text p > span {
-      display: none;
-    }
-  }
-  @media only screen and (min-width: 769px) {
-    &__text p + p {
-      display: inline;
-    }
+    
+  .more.open {
+    display: block;
+    transition: all 1s ease;
+    
   }
   //.section__read-more
   &__read-more {
+    padding: 10px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
@@ -330,6 +334,7 @@ body {
     overflow: auto;
     align-items: center;
     list-style: none;
+    margin-left: -40px;
   }
   &__servises::-webkit-scrollbar {
     width: 0px;
@@ -338,21 +343,24 @@ body {
 
   // .menu__link
   &__link {
+    padding: 8px 16px;
+  }
+
+  &__link--item {
+    white-space: nowrap;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     color: $color_6;
-    margin-right: 28px;
-    white-space: nowrap;
   }
-  @media only screen and (min-width: 769px) and (max-width: 1119px) {
-    
-    &__servises {
-      display: flex;
-      flex-wrap: wrap;
-      row-gap: 22px;
-    }
+   &__link--item:focus {
+    padding: 8px 16px;
+    border: 2px $color_4 solid;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-top: 10px;
   }
+
   @media only screen and (min-width: 1120px) {
 
     // .menu__servises
@@ -367,11 +375,11 @@ body {
     }
   }
 
-  &__link--active {
-    border: 2px $color_4 solid;
-    border-radius: 6px;
-    background-color: #fff;
-    padding: 8px 13px;
-    margin-left: -40px;
-  }
+  // &__link:checked {
+  //   border: 2px $color_4 solid;
+  //   border-radius: 6px;
+  //   background-color: #fff;
+  //   padding: 8px 13px;
+  //   margin-left: -40px;
+  // }
 }
