@@ -361,19 +361,19 @@ template {
 
 @font-face {
   font-family: "TT Lakes";
-  src: url("/TTLakes-Regular.22438c9a.ttf") format("truetype");
+  src: url("TTLakes-Regular.22438c9a.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "TT Lakes";
-  src: url("/TTLakes-Medium.0530da0f.ttf") format("truetype");
+  src: url("TTLakes-Medium.0530da0f.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "TT Lakes";
-  src: url("/TTLakes-Bold.1fb9d512.ttf") format("truetype");
+  src: url("TTLakes-Bold.1fb9d512.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -457,12 +457,12 @@ body {
   text-align: center;
 }
 .menu__item--burger {
-  background-image: url("/icon__burger.69c3f405.svg");
+  background-image: url("icon__burger.69c3f405.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .menu__item--phone {
-  background-image: url("/icon__phone.b327fd72.svg");
+  background-image: url("icon__phone.b327fd72.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -470,22 +470,22 @@ body {
   margin-right: 16px;
 }
 .menu__item--chat {
-  background-image: url("/icon__chat.c32db960.svg");
+  background-image: url("icon__chat.c32db960.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .menu__item--user {
-  background-image: url("/icon__user.2a5cb428.svg");
+  background-image: url("icon__user.2a5cb428.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .menu__item--path {
-  background-image: url("/icon__path.7768441c.svg");
+  background-image: url("icon__path.7768441c.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .menu__item--search {
-  background-image: url("/icon__search.b619edda.svg");
+  background-image: url("icon__search.b619edda.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
